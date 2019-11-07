@@ -26,7 +26,6 @@ const limiter = ratelimit({
 });
 app.use('/api', limiter);
 app.use(pasport.initialize());
-require('./utils/passport')(pasport);
 app.use(mongoSanitize());
 app.use(xss());
 app.use(
